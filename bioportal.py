@@ -47,7 +47,7 @@ class BioPortalClient:
 		terms = [ term [ "annotatedClass" ] [ "@id" ] for term in jterms ]
 		return terms
 
-if __name__ == '__main__':
+if __name__ == '__main__DISABLED':
 	# TODO: this is what their UI uses: 8b5b7825-538d-40e0-9e9e-5ab9274a9aeb
 	if len ( sys.argv ) < 2:
 		 raise TypeError ( "A Bioportal API key is needed to test this module (as command line argument)" )
