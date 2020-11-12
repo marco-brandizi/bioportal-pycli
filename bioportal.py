@@ -117,10 +117,7 @@ def test ():
 	if len ( sys.argv ) < 2: return
 	apikey = sys.argv [ 1 ]
 	# This is Jupyter
-	if apikey == "-f":
-		if len ( sys.argv ) < 3: return
-		else: apikey = sys.argv [ 2 ]
-	
+	if apikey == "-f": return
 	global is_debug; is_debug = True
 	bp = BioPortalClient ( apikey )
 	#terms = bp.annotator_terms ( "Melanoma is a malignant tumor usually affecting the skin", cutoff = 3, ontologies = "MESH,SNOMED,ICD10" )
