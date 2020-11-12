@@ -59,9 +59,11 @@ class BioPortalClient:
 if __name__ == '__main__':
 	# TODO: this is what their UI uses: 8b5b7825-538d-40e0-9e9e-5ab9274a9aeb
 	if len ( sys.argv ) < 2:
-		 raise TypeError ( "A Bioportal API key is needed to test this module (as command line argument)" )
-	bp = BioPortalClient ( sys.argv [ 1 ] )
-	#terms = bp.annotator_terms ( "Melanoma is a malignant tumor usually affecting the skin", cutoff = 3, ontologies = "MESH,SNOMED,ICD10" )
-	terms = bp.annotator_terms ( "Melanoma is a malignant tumor usually affecting the skin", 3 )
-	terms = terms [ 0: 9 ]
-	print ( terms )
+	  #print ( "A Bioportal API key is needed to test this module (as command line argument). Skipping tests" )
+		pass
+	else:
+		bp = BioPortalClient ( sys.argv [ 1 ] )
+		#terms = bp.annotator_terms ( "Melanoma is a malignant tumor usually affecting the skin", cutoff = 3, ontologies = "MESH,SNOMED,ICD10" )
+		terms = bp.annotator_terms ( "Melanoma is a malignant tumor usually affecting the skin", 3 )
+		terms = terms [ 0: 9 ]
+		print ( terms )
