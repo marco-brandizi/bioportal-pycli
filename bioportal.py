@@ -1,5 +1,13 @@
-from urllib.parse import quote
-from urllib.request import urlopen
+import platform
+majorv = platform.python_version()
+majorv = int ( majorv [ 0 ] )
+if majorv > 2:
+  from urllib.parse import quote
+  from urllib.request import urlopen
+else:
+  from urllib2 import quote
+  from urllib2 import urlopen
+
 import json
 import sys
 
