@@ -56,7 +56,7 @@ class BioPortalClient:
 			new_terms = new_terms [ 0: cutoff ] 
 		return new_terms
 
-if __name__ == '__main__':
+if __name__ == '__main__DISABLED':
 	# TODO: this is what their UI uses: 8b5b7825-538d-40e0-9e9e-5ab9274a9aeb
 	if len ( sys.argv ) < 2:
 	  #print ( "A Bioportal API key is needed to test this module (as command line argument). Skipping tests" )
