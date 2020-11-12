@@ -37,7 +37,7 @@ class BioPortalClient:
 		other_params [ "text" ] = text
 		url = self._bp_baseurl ( "/annotator" )
 		url = url_build ( url, **other_params )
-		print ( url )
+		# DEBUG print ( url )
 		jterms = urlopen ( url ).read()
 		jterms = json.loads( jterms )
 		return jterms
